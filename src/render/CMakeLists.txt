@@ -1,6 +1,6 @@
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-set(OPENGL_LIB -lglfw3 -lXrandr -lX11 -lXxf86vm -lpthread -lXcursor -lXinerama -ldl -lassimp)
+set(OPENGL_LIB -lglfw -lXrandr -lX11 -lXxf86vm -lpthread -lXcursor -lXinerama -ldl -lassimp)
 set(RENDER_LIB ${CMAKE_SOURCE_DIR}/lib/glad.c ${CMAKE_SOURCE_DIR}/lib/stb_image.cpp)
 
 

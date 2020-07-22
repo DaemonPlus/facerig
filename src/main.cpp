@@ -50,15 +50,15 @@ int main(int argc, char* argv[])
             face_landmarks = landmark_detector->detect_landmarks(image, tracked_face);
             face_rotation = feature_detector.detect_face_direction(face_landmarks);
 
-            cv::cvtColor(image, image, CV_BGR2GRAY);
-            cv::cvtColor(image, image, CV_GRAY2BGR);
+            cv::cvtColor(image, image, cv::COLOR_BGR2GRAY);
+            cv::cvtColor(image, image, cv::COLOR_GRAY2BGR);
 
             cv::rectangle(image, tracked_face, cv::Scalar(0, 0, 255));
             for (auto mark : face_landmarks) {
                 cv::circle(image, cv::Point(mark.x, mark.y), 1, cv::Scalar(0,0,0), -1);
             }
         } else {
-            cv::cvtColor(image, image, CV_BGR2GRAY);
+            cv::cvtColor(image, image, cv::COLOR_BGR2GRAY);
         }
 
         cv::imshow("WebCam output", image);
